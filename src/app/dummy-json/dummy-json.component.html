@@ -1,19 +1,19 @@
 <p-table
   [value]="products"
-  [paginator]="false"
-  [virtualScroll]="true" 
-  [rows]="40" 
-  [lazy]="true"
-  [size]="'small'"
   [scrollable]="true"
   scrollHeight="490px" 
-  styleClass="p-datatable-striped p-datatable-gridlines"
-  [virtualScrollItemSize]="40" 
+  [rows]="40" 
+  [virtualScroll]="true" 
+  [virtualScrollItemSize]="26"
+  stripedRows 
+  [size]="'small'"
+  [lazy]="true"
   (onLazyLoad)="loadProducts($event)"
 
   [loading]="loading"
   [sortMode]="'single'"
-  dataKey="id" [paginator]="false"
+  dataKey="id" 
+  [paginator]="false"
 >
   <ng-template pTemplate="header">
     <tr>

@@ -1,0 +1,40 @@
+<div class="card">
+    <p-table 
+    [value]="virtualCars" 
+    [scrollable]="true" 
+    scrollHeight="480px" 
+    [rows]="40" 
+    [virtualScroll]="true" 
+    [virtualScrollItemSize]="26" 
+    stripedRows
+    [size]="'small'"
+    [lazy]="true" 
+    (onLazyLoad)="loadCarsLazy($event)"
+    
+    [loading]="loading"
+
+    [columns]="cols" 
+    >
+        <ng-template #header let-columns>
+            <tr>
+                <th *ngFor="let col of columns" style="width: 20%;">
+                    {{col.header}}
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template #body let-rowData let-columns="columns">
+            <tr >
+                <td *ngFor="let col of columns">
+                    {{rowData[col.field]}}
+                </td>
+            </tr>
+        </ng-template>
+        <!-- <ng-template #loadingbody let-columns="columns">
+            <tr >
+                <td *ngFor="let col of columns; let even = even">
+                    <p-skeleton [ngStyle]="{'width': even ? (col.field === 'year' ? '30%' : '40%') : '60%'}" />
+                </td>
+            </tr>
+        </ng-template> -->
+    </p-table>
+</div>

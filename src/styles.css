@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+@import "primeicons/primeicons.css" layer(components);
+
+.p-inputtext {
+  font-size: 0.875rem;
+  height: clamp(1.5rem, 36px, 4rem);
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
+  
+}
+
+
+
+.p-float-label label {
+  font-size: 0.75rem;
+}
+
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem; /* Add some space below the input */
+    margin-left: 1rem;
+  }
+  
+  .input-label {
+    font-size: 0.75rem; /* Adjust the font size as needed */
+    margin-bottom: 0.25rem; /* Space between label and input */
+    margin-left: 0.5rem;
+  }
+  
+  .input-field {
+    font-size: 0.875rem; /* Match the input text size */
+    height: 32px; /* Set the desired height */
+    padding: 0.25rem 0.5rem; /* Adjust padding */
+    /* width: 30%; */
+  }
+
+  .select-width {
+    width: 30%;
+  }
+
+  .select-field {
+    font-size: 0.875rem; /* Match the input text size */
+    /*height: 32px;  Set the desired height */
+    /*padding: 0.25rem 0.5rem;  Adjust padding */
+    width: 30%;
+  }

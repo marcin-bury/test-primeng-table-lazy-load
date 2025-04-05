@@ -1,12 +1,30 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { DummyJsonComponent } from './dummy-json/dummy-json.component';
+
+type FormState = 'Browse' | 'Insert' | 'Edit' | 'Delete';
+
+const stateColors: Record<FormState, string> = {
+  Browse: 'bg-neutral-50',
+  Insert: 'bg-green-100',
+  Edit: 'bg-yellow-100',
+  Delete: 'bg-red-300',
+};
+
+function getColorForState(state: FormState): string {
+  return stateColors[state];
+}
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [CommonModule, FormsModule, DummyJsonComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'test-primeng-table-lazy-load';
+  constructor() {}
+
+  ngOnInit() {}
 }

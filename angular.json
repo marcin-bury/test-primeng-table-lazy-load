@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "test-primeng-table-lazy-load": {
+    "test-primeng": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/test-primeng-table-lazy-load",
+            "outputPath": "dist/test-primeng",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "test-primeng-table-lazy-load:build:production"
+              "buildTarget": "test-primeng:build:production"
             },
             "development": {
-              "buildTarget": "test-primeng-table-lazy-load:build:development"
+              "buildTarget": "test-primeng:build:development"
             }
           },
           "defaultConfiguration": "development"
